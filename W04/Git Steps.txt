@@ -1,0 +1,87 @@
+git
+===========================================
+1. Navigate to the folder 
+
+cd Documents/
+mkdir lego_coding
+cd lego_coding/
+
+===========================================
+2. Initialize git
+
+$ git init
+$ git status
+$ git config --global user.name “FirstName LastName”
+$ git config --global user.email “email@cisco.com”
+
+===========================================
+3. Create file
+
+touch homework_1.py
+vi homework_1.py
+print('hello Git!')
+git status
+git add homework_1.py
+git status
+git commit -m "initial commit"
+
+===========================================
+4 Modify file and show 3 version of the file
+
+- Add 2nd line
+git add homework_1.py
+git status
+
+- Add 3rd line - 3 version of the file.
+git status
+git add homework_1.py
+git commit -m "Add the second line"
+git status
+
+git log
+
+===========================================
+5. Checkout 
+
+$ git checkout 19aa11b2083840709bec548d6395279a8e3a9907
+$ git checkout master
+
+===========================================
+6. Remote repo
+
+Create a repo "lego_coding" on gitlab
+
+$ git remote add origin git remote add origin https://github.com/<USERNAME>/lego_coding.git
+$ git push -u origin master
+
+===========================================
+7. Branches 
+
+git checkout -b feature_1
+git status
+
+vi homework_2.py
+print("Hello New feature!")
+
+git add homework_2.py
+git status
+git commit -m "Added feature 1"
+git push -u origin feature_1
+
+git show-branch feature_1 master
+
+===========================================
+8. Merging
+
+git checkout master
+git status
+git merge feature_1
+git push origin master
+
+
+
+
+
+
+
+

@@ -1,0 +1,654 @@
+Jan  1 00:00:25 m683A1E53C968 kern.notice brain: +start_ble_app &
+Jan  1 00:00:25 m683A1E53C968 kern.notice brain: +grep Hardware /proc/cpuinfo | awk '{print $4}'
+Jan  1 00:00:25 m683A1E53C968 kern.notice brain: -killall bigacl_d
+Jan  1 00:00:25 m683A1E53C968 kern.notice brain: +bigacl_d >> /var/log/bigacl_d.log 2>&1 &
+Jan  1 00:00:25 m683A1E53C968 kern.warn brain: transitioning from init to scan1
+Jan  1 00:00:25 m683A1E53C968 kern.warn brain: Started scan
+Jan  1 00:00:25 m683A1E53C968 kern.err kernel: [   31.731451] wlan: [2784: I:ANY] ieee80211_ioctl_siwscan: 1284: preempt_scan
+Jan  1 00:00:25 m683A1E53C968 kern.err kernel: [   31.731464] wlan: [2784: I:ANY] 
+Jan  1 00:00:25 m683A1E53C968 kern.err kernel: [   31.733054] chatter: bigacl load failed: checksum error (expected 7ffcf9901ae49f5b167b9758af2e406e6582a335, actual: d8e0919c30cb99f475880afbe227df3a24e450ad, buf size: 113831)
+Jan  1 00:00:25 m683A1E53C968 kern.info ble_app: Get BLE event.
+Jan  1 00:00:27 m683A1E53C968 kern.notice brain: +iwconfig apr0v0 essid ""; iwpriv apr0v0 scanband 0; ifconfig apr0v0 up; iwlist apr0v0 scan > /dev/null 2>&1;
+Jan  1 00:00:27 m683A1E53C968 kern.err kernel: [   33.893794] wlan: [2849: I:ANY] ieee80211_ioctl_siwscan: 1284: preempt_scan
+Jan  1 00:00:27 m683A1E53C968 kern.err kernel: [   33.893807] wlan: [2849: I:ANY] 
+Jan  1 00:00:31 m683A1E53C968 kern.warn list_updater: no valid uplink found in /tmp/brain_state (scan), assuming wired0
+Jan  1 00:00:32 m683A1E53C968 kern.notice brain: +iwconfig apr1v0 essid ""; iwpriv apr1v0 scanband 1; ifconfig apr1v0 up; iwlist apr1v0 scan > /dev/null 2>&1;
+Jan  1 00:00:32 m683A1E53C968 kern.notice brain: +cp /proc/net/madwifi/apr0v0/scan_results /var/log/last_scan.wifi0 
+Jan  1 00:00:32 m683A1E53C968 kern.notice brain: +cp /proc/net/madwifi/apr1v0/scan_results /var/log/last_scan.wifi1 
+Jan  1 00:00:32 m683A1E53C968 kern.warn brain: Finished scan
+Jan  1 00:00:33 m683A1E53C968 kern.warn brain: Started scan
+Jan  1 00:00:33 m683A1E53C968 kern.err kernel: [   39.803878] wlan: [3297: I:ANY] ieee80211_ioctl_siwscan: 1284: preempt_scan
+Jan  1 00:00:33 m683A1E53C968 kern.err kernel: [   39.803890] wlan: [3297: I:ANY] 
+Jan  1 00:00:35 m683A1E53C968 kern.notice brain: +iwconfig apr0v0 essid ""; iwpriv apr0v0 scanband 0; ifconfig apr0v0 up; iwlist apr0v0 scan > /dev/null 2>&1;
+Jan  1 00:00:35 m683A1E53C968 kern.err kernel: [   41.983823] wlan: [3472: I:ANY] ieee80211_ioctl_siwscan: 1284: preempt_scan
+Jan  1 00:00:35 m683A1E53C968 kern.err kernel: [   41.983843] wlan: [3472: I:ANY] 
+Jan  1 00:00:37 m683A1E53C968 kern.notice config_updater: -OPENSSL_CONF=/etc/ssl/tamengine.cnf /usr/bin/runmax 90 /usr/bin/curl --compressed -L -sS --dump-header "/tmp/3097.curl_headers" --cacert "/etc/ssl/meraki-ca.crt" -o "/tmp/config.new" --engine ctamc --cert-type 
+Jan  1 00:00:37 m683A1E53C968 kern.notice config_updater:  ENG --cert RSA_SUDICRT --key-type ENG --key RSA_SUDIKEY  "https://cs210-2037.meraki.com:7734/config/node?cfg_ver=9&mac=68%3A3a%3A1e%3A53%3Ac9%3A68&build=26-axe-202001160318-G06a4d82b-rel-pioneer&arch=arm64&boar
+Jan  1 00:00:37 m683A1E53C968 kern.notice config_updater:  d=axe&use_ssl_auth=1&reason=FW_FETCH_INIT"
+Jan  1 00:00:37 m683A1E53C968 kern.crit config_updater: download failed 0 [start-up]
+Jan  1 00:00:37 m683A1E53C968 kern.crit config_updater: failsafe_mode "value='0' state='0' bootloop='0' ver='1' " ""
+Jan  1 00:00:37 m683A1E53C968 user.warn kernel: [   43.735932] !!!!! {/usr/bin/config_updater} failsafe_mode "value='0' state='0' bootloop='0' ver='1' " ""
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwconfig apr1v0 essid ""; iwpriv apr1v0 scanband 1; ifconfig apr1v0 up; iwlist apr1v0 scan > /dev/null 2>&1;
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +cp /proc/net/madwifi/apr0v0/scan_results /var/log/last_scan.wifi0 
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +cp /proc/net/madwifi/apr1v0/scan_results /var/log/last_scan.wifi1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Finished scan
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: No gateways found using RoE
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: mon0: Finished parsing scan results
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: mon1: Finished parsing scan results
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: mon0: Best overall channel is 11
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: mon1: Best overall channel is 64
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: do_scan:2441: assigning brain state: node_check; reason: mesh_found
+Jan  1 00:00:40 m683A1E53C968 kern.crit brain: dhcpc succeeded on wired0
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: do_state:5709: assigning brain state: gateway_check 0; reason: dhcp_on_wired0
+Jan  1 00:00:40 m683A1E53C968 kern.info brain: IPv4 config:ethernet_port wired0, ip 172.16.2.62, netmask 255.255.240.0, gw 172.16.0.1, mtu 1500, bcast 172.16.15.255, dns1 172.16.0.1, vid 0, static_ip_failover false, dhcp_vlan_failover false
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +ifconfig wired0 172.16.2.62 netmask 255.255.255.255 
+Jan  1 00:00:40 m683A1E53C968 daemon.info dnsmasq[3908]: started, version 2.79 cachesize 150
+Jan  1 00:00:40 m683A1E53C968 daemon.info dnsmasq[3908]: compile time options: IPv6 GNU-getopt no-DBus no-i18n no-IDN no-DHCP no-Lua no-TFTP no-conntrack ipset auth no-DNSSEC loop-detect no-inotify
+Jan  1 00:00:40 m683A1E53C968 daemon.warn dnsmasq[3908]: warning: using interface srcr2 instead
+Jan  1 00:00:40 m683A1E53C968 daemon.warn dnsmasq[3908]: warning: using interface srcr2 instead
+Jan  1 00:00:40 m683A1E53C968 daemon.warn dnsmasq[3908]: warning: using interface srcr2 instead
+Jan  1 00:00:40 m683A1E53C968 daemon.info dnsmasq[3908]: using nameserver 172.16.0.1#53
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +dnsmasq -C /etc/dnsmasq.host.conf
+Jan  1 00:00:40 m683A1E53C968 daemon.info dnsmasq[3908]: read /etc/hosts - 6 addresses
+Jan  1 00:00:40 m683A1E53C968 kern.info brain: IPv6 config: ethernet_port wired0, iplocal ::, ip6 ::/0, gw ::, mtu 0, dns6_1 ::, vid 0
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: -ifconfig wired0 ::/128
+Jan  1 00:00:40 m683A1E53C968 daemon.info dnsmasq[3908]: exiting on receipt of SIGTERM
+Jan  1 00:00:40 m683A1E53C968 daemon.info dnsmasq[3926]: started, version 2.79 cachesize 150
+Jan  1 00:00:40 m683A1E53C968 daemon.info dnsmasq[3926]: compile time options: IPv6 GNU-getopt no-DBus no-i18n no-IDN no-DHCP no-Lua no-TFTP no-conntrack ipset auth no-DNSSEC loop-detect no-inotify
+Jan  1 00:00:40 m683A1E53C968 daemon.warn dnsmasq[3926]: warning: using interface srcr2 instead
+Jan  1 00:00:40 m683A1E53C968 daemon.warn dnsmasq[3926]: warning: using interface srcr2 instead
+Jan  1 00:00:40 m683A1E53C968 daemon.warn dnsmasq[3926]: warning: using interface srcr2 instead
+Jan  1 00:00:40 m683A1E53C968 daemon.info dnsmasq[3926]: using nameserver 172.16.0.1#53
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +dnsmasq -C /etc/dnsmasq.host.conf
+Jan  1 00:00:40 m683A1E53C968 daemon.info dnsmasq[3926]: read /etc/hosts - 6 addresses
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: transitioning from scan1 to gateway_check 0
+Jan  1 00:00:40 m683A1E53C968 kern.info brain: checking to see if change is a nop - current channel 1 new 6 current width 20 new 20
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv mon0 get_mode
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Override ax mode (new 11ghe20, curr 11b, radio_mode_protocol 11ghe) - call get_ath_radio_mode again with 0
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on mon0, new mode 11ghe20
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   46.993085] wlan: [0: I:ANY] wmi_vdev_down id: 16
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   46.993558] wlan: [0: I:ANY] STOPPED EVENT for vap 16 (ffffffc077d00800)
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   46.996044] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv wifi0 set_bcnburst 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr0v0, new mode 11ghe20
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr0v0 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr0v1, new mode 11ghe20
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr0v1 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr0v2, new mode 11ghe20
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr0v2 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr0v3, new mode 11ghe20
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr0v3 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr0v4, new mode 11ghe20
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr0v4 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr0v5, new mode 11ghe20
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr0v5 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr0v6, new mode 11ghe20
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr0v6 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr0v7, new mode 11ghe20
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.014234] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.015408] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.016582] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.017739] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.018947] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.020101] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.021253] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.022436] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr0v7 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr0v8, new mode 11ghe20
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr0v8 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr0v9, new mode 11ghe20
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr0v9 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr0v10, new mode 11ghe20
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr0v10 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr0v11, new mode 11ghe20
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr0v11 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr0v12, new mode 11ghe20
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr0v12 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr0v13, new mode 11ghe20
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr0v13 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr0v14, new mode 11ghe20
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr0v14 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.023640] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.024778] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.025961] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.027109] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.028251] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.029484] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.030650] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.031953] wlan: [1442: I:ANY] OL vap start id: 16 +
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.031985] wlan: [1442: I:ANY] OL vap_start -
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.052938] wlan: [1442: I:ANY] osif_vap_init: 8254: chan: 0xffffffc076221a80
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.052949] wlan: [1442: I:ANY] 
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.053381] wlan: [0: I:ANY] OL vap start id: 15 +
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.053407] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.159561] wlan: [0: I:ANY] ol_ath_vap_up, Enabling Beacon on Mesh Vap (vdev id: 15)
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.159689] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 0
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.159710] wlan: [0: I:ANY] Setting Tx Encap type to 2 (Ethernet)
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.159724] wlan: [0: I:ANY] Setting Rx Decap type to 2 (Ethernet)
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Switching mon0 to 6
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.172815] wlan: [1442: I:ANY] Mgmt Rate:12000(kbps) | Rate Code:0x10000002
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.172835] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 6000(kbps) and rate code: 0x10000003
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.172853] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 6000(kbps) and rate code: 0x10000003
+Jan  1 00:00:40 m683A1E53C968 kern.info brain: checking to see if change is a nop - current channel 36 new 44 current width 20 new 80
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv mon1 get_mode
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Override ax mode (new 11ahe80, curr 11a, radio_mode_protocol 11ahe) - call get_ath_radio_mode again with 0
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on mon1, new mode 11ahe80
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.204766] wlan: [0: I:ANY] wmi_vdev_down id: 33
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.206054] wlan: [0: I:ANY] STOPPED EVENT for vap 33 (ffffffc076c25000)
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.207539] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv wifi1 set_bcnburst 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr1v0, new mode 11ahe80
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr1v0 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr1v1, new mode 11ahe80
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr1v1 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr1v2, new mode 11ahe80
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr1v2 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr1v3, new mode 11ahe80
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr1v3 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr1v4, new mode 11ahe80
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr1v4 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr1v5, new mode 11ahe80
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr1v5 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr1v6, new mode 11ahe80
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr1v6 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr1v7, new mode 11ahe80
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.224159] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.225360] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.226536] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.227825] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.228992] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.230252] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.231488] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.232674] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr1v7 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr1v8, new mode 11ahe80
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr1v8 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr1v9, new mode 11ahe80
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr1v9 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr1v10, new mode 11ahe80
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr1v10 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr1v11, new mode 11ahe80
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr1v11 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr1v12, new mode 11ahe80
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr1v12 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr1v13, new mode 11ahe80
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr1v13 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on apr1v14, new mode 11ahe80
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv apr1v14 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.warn brain: Set radio mode on mesh1, new mode 11ahe80
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.234217] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.235382] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.236552] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.237707] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.238893] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.240045] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.241327] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.242487] wlan: [1442: I:ANY] EXT NSS Supported
+Jan  1 00:00:40 m683A1E53C968 kern.notice brain: +iwpriv mesh1 shortgi 1 
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.244172] wlan: [1442: I:ANY] OL vap start id: 33 +
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.244209] wlan: [1442: I:ANY] OL vap_start -
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.272888] wlan: [1442: I:ANY] osif_vap_init: 8254: chan: 0xffffffc0761e1b00
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.272899] wlan: [1442: I:ANY] 
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.273288] wlan: [0: I:ANY] OL vap start id: 32 +
+Jan  1 00:00:40 m683A1E53C968 kern.err kernel: [   47.273322] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   47.602850] wlan: [0: I:ANY] ol_ath_vap_up, Enabling Beacon on Mesh Vap (vdev id: 32)
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   47.602971] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 7
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   47.602992] wlan: [0: I:ANY] Setting Tx Encap type to 2 (Ethernet)
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   47.603007] wlan: [0: I:ANY] Setting Rx Decap type to 2 (Ethernet)
+Jan  1 00:00:41 m683A1E53C968 kern.warn brain: Switching mon1 to 44
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   47.612820] wlan: [1442: I:ANY] Mgmt Rate:6000(kbps) | Rate Code:0x10000003
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   47.612858] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 6000(kbps) and rate code: 0x10000003
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   47.612877] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 6000(kbps) and rate code: 0x10000003
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwconfig apr0v0 key off; iwconfig apr1v0 key off;
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4027]: started, version 2.79 cachesize 150
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4027]: compile time options: IPv6 GNU-getopt no-DBus no-i18n no-IDN no-DHCP no-Lua no-TFTP no-conntrack ipset auth no-DNSSEC loop-detect no-inotify
+Jan  1 00:00:41 m683A1E53C968 daemon.warn dnsmasq[4027]: warning: using interface srcr2 instead
+Jan  1 00:00:41 m683A1E53C968 daemon.warn dnsmasq[4027]: warning: using interface srcr2 instead
+Jan  1 00:00:41 m683A1E53C968 daemon.warn dnsmasq[4027]: warning: using interface srcr2 instead
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4027]: using nameserver 172.16.0.1#53
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +dnsmasq -C /etc/dnsmasq.vap0.conf
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4027]: read /etc/hosts - 6 addresses
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr0v0 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr1v0 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwconfig apr0v1 key off; iwconfig apr1v1 key off;
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4035]: started, version 2.79 cachesize 150
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4035]: compile time options: IPv6 GNU-getopt no-DBus no-i18n no-IDN no-DHCP no-Lua no-TFTP no-conntrack ipset auth no-DNSSEC loop-detect no-inotify
+Jan  1 00:00:41 m683A1E53C968 daemon.warn dnsmasq[4035]: warning: using interface srcr2 instead
+Jan  1 00:00:41 m683A1E53C968 daemon.warn dnsmasq[4035]: warning: using interface srcr2 instead
+Jan  1 00:00:41 m683A1E53C968 daemon.warn dnsmasq[4035]: warning: using interface srcr2 instead
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4035]: using nameserver 172.16.0.1#53
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +dnsmasq -C /etc/dnsmasq.vap1.conf
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4035]: read /etc/hosts - 6 addresses
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr0v1 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr1v1 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwconfig apr0v2 key off; iwconfig apr1v2 key off;
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4043]: started, version 2.79 cachesize 150
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4043]: compile time options: IPv6 GNU-getopt no-DBus no-i18n no-IDN no-DHCP no-Lua no-TFTP no-conntrack ipset auth no-DNSSEC loop-detect no-inotify
+Jan  1 00:00:41 m683A1E53C968 daemon.warn dnsmasq[4043]: warning: using interface srcr2 instead
+Jan  1 00:00:41 m683A1E53C968 daemon.warn dnsmasq[4043]: warning: using interface srcr2 instead
+Jan  1 00:00:41 m683A1E53C968 daemon.warn dnsmasq[4043]: warning: using interface srcr2 instead
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +dnsmasq -C /etc/dnsmasq.vap2.conf
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4043]: using nameserver 172.16.0.1#53
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4043]: read /etc/hosts - 6 addresses
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr0v2 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr1v2 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwconfig apr0v3 key off; iwconfig apr1v3 key off;
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4051]: started, version 2.79 cachesize 150
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4051]: compile time options: IPv6 GNU-getopt no-DBus no-i18n no-IDN no-DHCP no-Lua no-TFTP no-conntrack ipset auth no-DNSSEC loop-detect no-inotify
+Jan  1 00:00:41 m683A1E53C968 daemon.warn dnsmasq[4051]: warning: using interface srcr2 instead
+Jan  1 00:00:41 m683A1E53C968 daemon.warn dnsmasq[4051]: warning: using interface srcr2 instead
+Jan  1 00:00:41 m683A1E53C968 daemon.warn dnsmasq[4051]: warning: using interface srcr2 instead
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4051]: using nameserver 172.16.0.1#53
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +dnsmasq -C /etc/dnsmasq.vap3.conf
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4051]: read /etc/hosts - 6 addresses
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr0v3 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr1v3 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwconfig apr0v4 key off; iwconfig apr1v4 key off;
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr0v4 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr1v4 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwconfig apr0v5 key off; iwconfig apr1v5 key off;
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr0v5 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr1v5 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwconfig apr0v6 key off; iwconfig apr1v6 key off;
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr0v6 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr1v6 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwconfig apr0v7 key off; iwconfig apr1v7 key off;
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4074]: started, version 2.79 cachesize 150
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4074]: compile time options: IPv6 GNU-getopt no-DBus no-i18n no-IDN no-DHCP no-Lua no-TFTP no-conntrack ipset auth no-DNSSEC loop-detect no-inotify
+Jan  1 00:00:41 m683A1E53C968 daemon.warn dnsmasq[4074]: warning: using interface srcr2 instead
+Jan  1 00:00:41 m683A1E53C968 daemon.warn dnsmasq[4074]: warning: using interface srcr2 instead
+Jan  1 00:00:41 m683A1E53C968 daemon.warn dnsmasq[4074]: warning: using interface srcr2 instead
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4074]: using nameserver 172.16.0.1#53
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +dnsmasq -C /etc/dnsmasq.vap7.conf
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4074]: read /etc/hosts - 6 addresses
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr0v7 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr1v7 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwconfig apr0v8 key off; iwconfig apr1v8 key off;
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr0v8 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr1v8 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwconfig apr0v9 key off; iwconfig apr1v9 key off;
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr0v9 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr1v9 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwconfig apr0v10 key off; iwconfig apr1v10 key off;
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr0v10 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr1v10 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwconfig apr0v11 key off; iwconfig apr1v11 key off;
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr0v11 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr1v11 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwconfig apr0v12 key off; iwconfig apr1v12 key off;
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr0v12 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr1v12 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwconfig apr0v13 key off; iwconfig apr1v13 key off;
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr0v13 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr1v13 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwconfig apr0v14 key off; iwconfig apr1v14 key off;
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr0v14 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr1v14 shortgi 1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +/usr/bin/mtunnel_client -k KEY_REDACTED -i KEY_ID_REDACTED "209.206.57.46" "mtunnel.meraki.com" "mtunnel3.meraki.com" sec_srv "209.206.58.24" >> /var/log/mtunnel.log 2>&1 & /usr/bin/mtunnel_http_client -d >> /var/log/mtunnel_htt
+Jan  1 00:00:41 m683A1E53C968 user.notice : mtunnel_client started
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +connection_monitor >> /var/log/connection_monitor.log 2>&1 &
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +ifconfig wired1 0.0.0.0 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +ifconfig srcr2:gw0 6.0.0.1 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +ifconfig srcr2:gw1 10.128.128.127 
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[3926]: exiting on receipt of SIGTERM
+Jan  1 00:00:41 m683A1E53C968 kern.warn connection_monitor: connection monitor started
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4143]: started, version 2.79 cachesize 150
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4143]: compile time options: IPv6 GNU-getopt no-DBus no-i18n no-IDN no-DHCP no-Lua no-TFTP no-conntrack ipset auth no-DNSSEC loop-detect no-inotify
+Jan  1 00:00:41 m683A1E53C968 daemon.warn dnsmasq[4143]: warning: using interface srcr2 instead
+Jan  1 00:00:41 m683A1E53C968 daemon.warn dnsmasq[4143]: warning: using interface srcr2 instead
+Jan  1 00:00:41 m683A1E53C968 daemon.warn dnsmasq[4143]: warning: using interface srcr2 instead
+Jan  1 00:00:41 m683A1E53C968 daemon.warn dnsmasq[4143]: warning: using interface srcr2 instead
+Jan  1 00:00:41 m683A1E53C968 daemon.warn dnsmasq[4143]: warning: using interface srcr2 instead
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4143]: using nameserver 172.16.0.1#53
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +dnsmasq -C /etc/dnsmasq.host.conf
+Jan  1 00:00:41 m683A1E53C968 daemon.info dnsmasq[4143]: read /etc/hosts - 6 addresses
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv wifi0 TXPwrRdc 0 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv wifi1 TXPwrRdc 0 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain:  load blacklists successful
+Jan  1 00:00:41 m683A1E53C968 kern.warn brain: do_state:5583: assigning brain state: gateway_good 0; reason: internet and dns connectivity successful
+Jan  1 00:00:41 m683A1E53C968 kern.warn brain: transitioning from gateway_check 0 to gateway_good 0
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwconfig apr0v0 key off; iwconfig apr1v0 key off;
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr0v0 fbt_enable 0 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr0v0 bcast_rate 11000 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr0v0 mcast_rate 11000 
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   47.967686] wlan: [4168: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   47.969006] wlan: [4169: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   47.969453] wlan: [1442: I:ANY] DES SSID SET=BBZSL-CLIENTS 
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   47.992880] wlan: [1442: I:ANY] osif_vap_init: 8254: chan: 0xffffffc076221a80
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   47.992892] wlan: [1442: I:ANY] 
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   47.993344] wlan: [0: I:ANY] OL vap start id: 0 +
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   47.993372] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.000982] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 0
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr1v0 fbt_enable 0 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr1v0 bcast_rate 12000 
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +iwpriv apr1v0 mcast_rate 12000 
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.012893] wlan: [1442: I:ANY] Mgmt Rate:11000(kbps) | Rate Code:0x10000100
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.012916] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.012933] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.016598] wlan: [4171: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.017709] wlan: [4172: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.018106] wlan: [1442: I:ANY] DES SSID SET=BBZSL-CLIENTS 
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.042826] wlan: [1442: I:ANY] osif_vap_init: 8254: chan: 0xffffffc0761e1b00
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.042839] wlan: [1442: I:ANY] 
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.043203] wlan: [0: I:ANY] OL vap start id: 17 +
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.043239] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.059792] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 7
+Jan  1 00:00:41 m683A1E53C968 kern.notice brain: +hostapd -t -P /var/run/hostapd.0.pid /etc/hostapd.apr0v0.conf /etc/hostapd.apr1v0.conf >> /var/log/hostapd.log 2>&1 &
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.062869] wlan: [1442: I:ANY] Mgmt Rate:12000(kbps) | Rate Code:0x10000002
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.062889] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.062907] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:41 m683A1E53C968 kern.warn kernel: [   48.122911]  ieee80211_ioctl_siwmode: imr.ifm_active=268436096, new mode=3, valid=1 
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.124108] wlan: [0: I:ANY] STOPPED EVENT for vap 0 (ffffffc077d00800)
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.124566] wlan: [0: I:ANY] wmi_vdev_down id: 0
+Jan  1 00:00:41 m683A1E53C968 daemon.info hostapd: apr0v0: RADIUS Authentication server 172.20.224.2:1812
+Jan  1 00:00:41 m683A1E53C968 kern.warn kernel: [   48.154470]  DEVICE IS DOWN ifname=apr0v0
+Jan  1 00:00:41 m683A1E53C968 kern.warn kernel: [   48.154507]  DEVICE IS DOWN ifname=apr0v0
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.182814] wlan: [4174: I:ANY] osif_vap_init: 8254: chan: 0xffffffc076221a80
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.182825] wlan: [4174: I:ANY] 
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.183271] wlan: [0: I:ANY] OL vap start id: 0 +
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.183296] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.211357] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 0
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.222811] wlan: [4174: I:ANY] Mgmt Rate:11000(kbps) | Rate Code:0x10000100
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.222831] wlan: [4174: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.222849] wlan: [4174: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:41 m683A1E53C968 kern.warn kernel: [   48.253081]  ieee80211_ioctl_siwmode: imr.ifm_active=150995584, new mode=3, valid=1 
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.254344] wlan: [0: I:ANY] STOPPED EVENT for vap 17 (ffffffc076c25000)
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.254800] wlan: [0: I:ANY] wmi_vdev_down id: 17
+Jan  1 00:00:41 m683A1E53C968 daemon.info hostapd: apr1v0: RADIUS Authentication server 172.20.224.2:1812
+Jan  1 00:00:41 m683A1E53C968 kern.warn kernel: [   48.284628]  DEVICE IS DOWN ifname=apr1v0
+Jan  1 00:00:41 m683A1E53C968 kern.warn kernel: [   48.284665]  DEVICE IS DOWN ifname=apr1v0
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.312811] wlan: [4174: I:ANY] osif_vap_init: 8254: chan: 0xffffffc0761e1b00
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.312823] wlan: [4174: I:ANY] 
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.313187] wlan: [0: I:ANY] OL vap start id: 17 +
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.313225] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.330244] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 7
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.332920] wlan: [4174: I:ANY] Mgmt Rate:12000(kbps) | Rate Code:0x10000002
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.332940] wlan: [4174: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:41 m683A1E53C968 kern.err kernel: [   48.332966] wlan: [4174: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:42 m683A1E53C968 kern.notice brain: +iwconfig apr0v1 key off; iwconfig apr1v1 key off;
+Jan  1 00:00:42 m683A1E53C968 kern.notice brain: +iwpriv apr0v1 fbt_enable 0 
+Jan  1 00:00:42 m683A1E53C968 kern.notice brain: +iwpriv apr0v1 bcast_rate 11000 
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.072461] wlan: [4287: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:42 m683A1E53C968 kern.notice brain: +iwpriv apr0v1 mcast_rate 11000 
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.073649] wlan: [4288: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.074026] wlan: [1442: I:ANY] DES SSID SET=BBZSL-LEHRER 
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.102809] wlan: [1442: I:ANY] osif_vap_init: 8254: chan: 0xffffffc076221a80
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.102820] wlan: [1442: I:ANY] 
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.103249] wlan: [0: I:ANY] OL vap start id: 1 +
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.103277] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.104123] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 0
+Jan  1 00:00:42 m683A1E53C968 kern.notice brain: +iwpriv apr1v1 fbt_enable 0 
+Jan  1 00:00:42 m683A1E53C968 kern.notice brain: +iwpriv apr1v1 bcast_rate 12000 
+Jan  1 00:00:42 m683A1E53C968 kern.notice brain: +iwpriv apr1v1 mcast_rate 12000 
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.122865] wlan: [1442: I:ANY] Mgmt Rate:11000(kbps) | Rate Code:0x10000100
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.122885] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.122902] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.126395] wlan: [4290: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.127536] wlan: [4291: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.127925] wlan: [1442: I:ANY] DES SSID SET=BBZSL-LEHRER 
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.152821] wlan: [1442: I:ANY] osif_vap_init: 8254: chan: 0xffffffc0761e1b00
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.152833] wlan: [1442: I:ANY] 
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.153217] wlan: [0: I:ANY] OL vap start id: 18 +
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.153251] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.171687] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 7
+Jan  1 00:00:42 m683A1E53C968 kern.notice brain: +hostapd -t -P /var/run/hostapd.1.pid /etc/hostapd.apr0v1.conf /etc/hostapd.apr1v1.conf >> /var/log/hostapd.log 2>&1 &
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.172872] wlan: [1442: I:ANY] Mgmt Rate:12000(kbps) | Rate Code:0x10000002
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.172893] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.172911] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:42 m683A1E53C968 kern.warn kernel: [   49.193000]  ieee80211_ioctl_siwmode: imr.ifm_active=268436096, new mode=3, valid=1 
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.195236] wlan: [0: I:ANY] STOPPED EVENT for vap 1 (ffffffc077d00800)
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.196403] wlan: [0: I:ANY] wmi_vdev_down id: 1
+Jan  1 00:00:42 m683A1E53C968 daemon.info hostapd: apr0v1: RADIUS Authentication server 172.20.224.2:1812
+Jan  1 00:00:42 m683A1E53C968 kern.warn kernel: [   49.224560]  DEVICE IS DOWN ifname=apr0v1
+Jan  1 00:00:42 m683A1E53C968 kern.warn kernel: [   49.224598]  DEVICE IS DOWN ifname=apr0v1
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.252810] wlan: [4295: I:ANY] osif_vap_init: 8254: chan: 0xffffffc076221a80
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.252836] wlan: [4295: I:ANY] 
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.253248] wlan: [0: I:ANY] OL vap start id: 1 +
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.253273] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.254133] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 0
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.272865] wlan: [4295: I:ANY] Mgmt Rate:11000(kbps) | Rate Code:0x10000100
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.272888] wlan: [4295: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.272909] wlan: [4295: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:42 m683A1E53C968 kern.warn kernel: [   49.332924]  ieee80211_ioctl_siwmode: imr.ifm_active=150995584, new mode=3, valid=1 
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.334320] wlan: [0: I:ANY] STOPPED EVENT for vap 18 (ffffffc076c25000)
+Jan  1 00:00:42 m683A1E53C968 kern.err kernel: [   49.334701] wlan: [0: I:ANY] wmi_vdev_down id: 18
+Jan  1 00:00:43 m683A1E53C968 daemon.info hostapd: apr1v1: RADIUS Authentication server 172.20.224.2:1812
+Jan  1 00:00:43 m683A1E53C968 kern.warn kernel: [   49.365113]  DEVICE IS DOWN ifname=apr1v1
+Jan  1 00:00:43 m683A1E53C968 kern.warn kernel: [   49.365144]  DEVICE IS DOWN ifname=apr1v1
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   49.392816] wlan: [4295: I:ANY] osif_vap_init: 8254: chan: 0xffffffc0761e1b00
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   49.392827] wlan: [4295: I:ANY] 
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   49.393185] wlan: [0: I:ANY] OL vap start id: 18 +
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   49.393222] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   49.394111] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 7
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   49.412893] wlan: [4295: I:ANY] Mgmt Rate:12000(kbps) | Rate Code:0x10000002
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   49.412919] wlan: [4295: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   49.412945] wlan: [4295: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:43 m683A1E53C968 kern.notice brain: +iwconfig apr0v2 key off; iwconfig apr1v2 key off;
+Jan  1 00:00:43 m683A1E53C968 kern.notice brain: +iwpriv apr0v2 fbt_enable 0 
+Jan  1 00:00:43 m683A1E53C968 kern.notice brain: +iwpriv apr0v2 bcast_rate 11000 
+Jan  1 00:00:43 m683A1E53C968 kern.notice brain: +iwpriv apr0v2 mcast_rate 11000 
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.183018] wlan: [4383: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.184449] wlan: [4384: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.184852] wlan: [1442: I:ANY] DES SSID SET=BBZSL-SCHUELER 
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.212839] wlan: [1442: I:ANY] osif_vap_init: 8254: chan: 0xffffffc076221a80
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.212850] wlan: [1442: I:ANY] 
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.213303] wlan: [0: I:ANY] OL vap start id: 2 +
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.213330] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.214261] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 0
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.232855] wlan: [1442: I:ANY] Mgmt Rate:11000(kbps) | Rate Code:0x10000100
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.232877] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.232894] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:43 m683A1E53C968 kern.notice brain: +iwpriv apr1v2 fbt_enable 0 
+Jan  1 00:00:43 m683A1E53C968 kern.notice brain: +iwpriv apr1v2 bcast_rate 12000 
+Jan  1 00:00:43 m683A1E53C968 kern.notice brain: +iwpriv apr1v2 mcast_rate 12000 
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.255741] wlan: [4398: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.257070] wlan: [4399: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.257551] wlan: [1442: I:ANY] DES SSID SET=BBZSL-SCHUELER 
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.282864] wlan: [1442: I:ANY] osif_vap_init: 8254: chan: 0xffffffc0761e1b00
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.282875] wlan: [1442: I:ANY] 
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.283244] wlan: [0: I:ANY] OL vap start id: 19 +
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.283279] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.284185] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 7
+Jan  1 00:00:43 m683A1E53C968 kern.notice brain: +hostapd -t -P /var/run/hostapd.2.pid /etc/hostapd.apr0v2.conf /etc/hostapd.apr1v2.conf >> /var/log/hostapd.log 2>&1 &
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.302833] wlan: [1442: I:ANY] Mgmt Rate:12000(kbps) | Rate Code:0x10000002
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.302856] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:43 m683A1E53C968 kern.err kernel: [   50.302874] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:44 m683A1E53C968 kern.warn kernel: [   50.352996]  ieee80211_ioctl_siwmode: imr.ifm_active=268436096, new mode=3, valid=1 
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.354277] wlan: [0: I:ANY] STOPPED EVENT for vap 2 (ffffffc077d00800)
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.354671] wlan: [0: I:ANY] wmi_vdev_down id: 2
+Jan  1 00:00:44 m683A1E53C968 daemon.info hostapd: apr0v2: RADIUS Authentication server 172.20.224.2:1812
+Jan  1 00:00:44 m683A1E53C968 kern.warn kernel: [   50.384459]  DEVICE IS DOWN ifname=apr0v2
+Jan  1 00:00:44 m683A1E53C968 kern.warn kernel: [   50.384494]  DEVICE IS DOWN ifname=apr0v2
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.412859] wlan: [4401: I:ANY] osif_vap_init: 8254: chan: 0xffffffc076221a80
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.412874] wlan: [4401: I:ANY] 
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.413331] wlan: [0: I:ANY] OL vap start id: 2 +
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.413359] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.414264] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 0
+Jan  1 00:00:44 m683A1E53C968 kern.warn connection_monitor: try_dns: 1 reason: runmax 4 nslookup "meraki.com" >/dev/null 2>/dev/null
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.432872] wlan: [4401: I:ANY] Mgmt Rate:11000(kbps) | Rate Code:0x10000100
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.432899] wlan: [4401: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.432918] wlan: [4401: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:44 m683A1E53C968 kern.warn kernel: [   50.462972]  ieee80211_ioctl_siwmode: imr.ifm_active=150995584, new mode=3, valid=1 
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.464247] wlan: [0: I:ANY] STOPPED EVENT for vap 19 (ffffffc076c25000)
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.464619] wlan: [0: I:ANY] wmi_vdev_down id: 19
+Jan  1 00:00:44 m683A1E53C968 daemon.info hostapd: apr1v2: RADIUS Authentication server 172.20.224.2:1812
+Jan  1 00:00:44 m683A1E53C968 kern.warn kernel: [   50.513240]  DEVICE IS DOWN ifname=apr1v2
+Jan  1 00:00:44 m683A1E53C968 kern.warn kernel: [   50.513271]  DEVICE IS DOWN ifname=apr1v2
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.542847] wlan: [4401: I:ANY] osif_vap_init: 8254: chan: 0xffffffc0761e1b00
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.542859] wlan: [4401: I:ANY] 
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.543237] wlan: [0: I:ANY] OL vap start id: 19 +
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.543277] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.544217] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 7
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.562833] wlan: [4401: I:ANY] Mgmt Rate:12000(kbps) | Rate Code:0x10000002
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.562861] wlan: [4401: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.562878] wlan: [4401: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:44 m683A1E53C968 kern.err kernel: [   50.795737] chatter: srcr2/m_es0 :: SR2ETTStat packet says rate 6.5Mbps-mcs0 is 19.5Mbps-mcs2 from A6:3A:1E:53:E1:5F
+Jan  1 00:00:44 m683A1E53C968 kern.notice brain: +iwconfig apr0v3 key off; iwconfig apr1v3 key off;
+Jan  1 00:00:44 m683A1E53C968 kern.notice brain: +wpa_passphrase "BBZSL-Temp" "mjh9zwosDfsS"
+Jan  1 00:00:44 m683A1E53C968 kern.notice brain: +iwpriv apr0v3 fbt_enable 0 
+Jan  1 00:00:44 m683A1E53C968 kern.notice brain: +iwpriv apr0v3 bcast_rate 11000 
+Jan  1 00:00:45 m683A1E53C968 kern.notice brain: +iwpriv apr0v3 mcast_rate 11000 
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.361008] wlan: [4495: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.362121] wlan: [4496: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.362644] wlan: [1442: I:ANY] DES SSID SET=BBZSL-Temp 
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.392815] wlan: [1442: I:ANY] osif_vap_init: 8254: chan: 0xffffffc076221a80
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.392827] wlan: [1442: I:ANY] 
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.393286] wlan: [0: I:ANY] OL vap start id: 3 +
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.393312] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.394238] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 0
+Jan  1 00:00:45 m683A1E53C968 kern.notice brain: +wpa_passphrase "BBZSL-Temp" "mjh9zwosDfsS"
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.412829] wlan: [1442: I:ANY] Mgmt Rate:11000(kbps) | Rate Code:0x10000100
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.412851] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.412868] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:45 m683A1E53C968 kern.notice brain: +iwpriv apr1v3 fbt_enable 0 
+Jan  1 00:00:45 m683A1E53C968 kern.notice brain: +iwpriv apr1v3 bcast_rate 12000 
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.472585] wlan: [4511: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:45 m683A1E53C968 kern.notice brain: +iwpriv apr1v3 mcast_rate 12000 
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.473756] wlan: [4512: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.474151] wlan: [1442: I:ANY] DES SSID SET=BBZSL-Temp 
+Jan  1 00:00:45 m683A1E53C968 kern.warn connection_monitor: try_lan: lan_good=1 ip_conflict_good=1 reason: `runmax 5 arping -I uplink_arping -q -f -c 3 -s 172.16.2.62 172.16.0.1` `runmax 5 arping -I uplink_arping -q -D -c 1 172.16.2.62` 
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.502830] wlan: [1442: I:ANY] osif_vap_init: 8254: chan: 0xffffffc0761e1b00
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.502843] wlan: [1442: I:ANY] 
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.503248] wlan: [0: I:ANY] OL vap start id: 20 +
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.503283] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.504214] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 7
+Jan  1 00:00:45 m683A1E53C968 kern.notice brain: +hostapd -t -P /var/run/hostapd.3.pid /etc/hostapd.apr0v3.conf /etc/hostapd.apr1v3.conf >> /var/log/hostapd.log 2>&1 &
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.522834] wlan: [1442: I:ANY] Mgmt Rate:12000(kbps) | Rate Code:0x10000002
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.522859] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.522877] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:45 m683A1E53C968 kern.warn kernel: [   51.582955]  ieee80211_ioctl_siwmode: imr.ifm_active=268436096, new mode=3, valid=1 
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.584338] wlan: [0: I:ANY] STOPPED EVENT for vap 3 (ffffffc077d00800)
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.584718] wlan: [0: I:ANY] wmi_vdev_down id: 3
+Jan  1 00:00:45 m683A1E53C968 kern.warn kernel: [   51.614703]  DEVICE IS DOWN ifname=apr0v3
+Jan  1 00:00:45 m683A1E53C968 kern.warn kernel: [   51.614745]  DEVICE IS DOWN ifname=apr0v3
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.642816] wlan: [4516: I:ANY] osif_vap_init: 8254: chan: 0xffffffc076221a80
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.642828] wlan: [4516: I:ANY] 
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.643257] wlan: [0: I:ANY] OL vap start id: 3 +
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.643284] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.644217] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 0
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.662863] wlan: [4516: I:ANY] Mgmt Rate:11000(kbps) | Rate Code:0x10000100
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.662901] wlan: [4516: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.662921] wlan: [4516: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:45 m683A1E53C968 kern.warn kernel: [   51.702834]  ieee80211_ioctl_siwmode: imr.ifm_active=150995584, new mode=3, valid=1 
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.704215] wlan: [0: I:ANY] STOPPED EVENT for vap 20 (ffffffc076c25000)
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.704628] wlan: [0: I:ANY] wmi_vdev_down id: 20
+Jan  1 00:00:45 m683A1E53C968 kern.warn kernel: [   51.734472]  DEVICE IS DOWN ifname=apr1v3
+Jan  1 00:00:45 m683A1E53C968 kern.warn kernel: [   51.734502]  DEVICE IS DOWN ifname=apr1v3
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.762852] wlan: [4516: I:ANY] osif_vap_init: 8254: chan: 0xffffffc0761e1b00
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.762866] wlan: [4516: I:ANY] 
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.763260] wlan: [0: I:ANY] OL vap start id: 20 +
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.763293] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.764263] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 7
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.782838] wlan: [4516: I:ANY] Mgmt Rate:12000(kbps) | Rate Code:0x10000002
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.782859] wlan: [4516: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:45 m683A1E53C968 kern.err kernel: [   51.782884] wlan: [4516: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:46 m683A1E53C968 kern.notice brain: +iwconfig apr0v7 key off; iwconfig apr1v7 key off;
+Jan  1 00:00:46 m683A1E53C968 kern.notice brain: +wpa_passphrase "TestSSID2" "fernglas"
+Jan  1 00:00:46 m683A1E53C968 kern.notice brain: +iwpriv apr0v7 fbt_enable 0 
+Jan  1 00:00:46 m683A1E53C968 kern.notice brain: +iwpriv apr0v7 bcast_rate 11000 
+Jan  1 00:00:46 m683A1E53C968 kern.notice brain: +iwpriv apr0v7 mcast_rate 11000 
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.586603] wlan: [4606: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.587654] wlan: [4607: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.588043] wlan: [1442: I:ANY] DES SSID SET=TestSSID2 
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.612838] wlan: [1442: I:ANY] osif_vap_init: 8254: chan: 0xffffffc076221a80
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.612854] wlan: [1442: I:ANY] 
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.613322] wlan: [0: I:ANY] OL vap start id: 7 +
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.613352] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.614298] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 0
+Jan  1 00:00:46 m683A1E53C968 kern.warn connection_monitor: try_inet: 1 reason: runmax 4 ping -c 2 "209.206.55.10" >/dev/null 2>/dev/null
+Jan  1 00:00:46 m683A1E53C968 kern.notice brain: +wpa_passphrase "TestSSID2" "fernglas"
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.632854] wlan: [1442: I:ANY] Mgmt Rate:11000(kbps) | Rate Code:0x10000100
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.632879] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.632898] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:46 m683A1E53C968 kern.notice brain: +iwpriv apr1v7 fbt_enable 0 
+Jan  1 00:00:46 m683A1E53C968 kern.notice brain: +iwpriv apr1v7 bcast_rate 12000 
+Jan  1 00:00:46 m683A1E53C968 kern.notice brain: +iwpriv apr1v7 mcast_rate 12000 
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.684768] wlan: [4622: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.685840] wlan: [4623: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.686237] wlan: [1442: I:ANY] DES SSID SET=TestSSID2 
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.712812] wlan: [1442: I:ANY] osif_vap_init: 8254: chan: 0xffffffc0761e1b00
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.712824] wlan: [1442: I:ANY] 
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.713177] wlan: [0: I:ANY] OL vap start id: 24 +
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.713211] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.714151] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 7
+Jan  1 00:00:46 m683A1E53C968 kern.notice brain: +hostapd -t -P /var/run/hostapd.7.pid /etc/hostapd.apr0v7.conf /etc/hostapd.apr1v7.conf >> /var/log/hostapd.log 2>&1 &
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.732864] wlan: [1442: I:ANY] Mgmt Rate:12000(kbps) | Rate Code:0x10000002
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.732884] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.732902] wlan: [1442: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:46 m683A1E53C968 kern.warn kernel: [   52.772919]  ieee80211_ioctl_siwmode: imr.ifm_active=268436096, new mode=3, valid=1 
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.774367] wlan: [0: I:ANY] STOPPED EVENT for vap 7 (ffffffc077d00800)
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.774756] wlan: [0: I:ANY] wmi_vdev_down id: 7
+Jan  1 00:00:46 m683A1E53C968 kern.warn kernel: [   52.804890]  DEVICE IS DOWN ifname=apr0v7
+Jan  1 00:00:46 m683A1E53C968 kern.warn kernel: [   52.804928]  DEVICE IS DOWN ifname=apr0v7
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.832859] wlan: [4625: I:ANY] osif_vap_init: 8254: chan: 0xffffffc076221a80
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.832870] wlan: [4625: I:ANY] 
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.833320] wlan: [0: I:ANY] OL vap start id: 7 +
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.833346] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.834237] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 0
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.852852] wlan: [4625: I:ANY] Mgmt Rate:11000(kbps) | Rate Code:0x10000100
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.852876] wlan: [4625: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.852902] wlan: [4625: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 11000(kbps) and rate code: 0x10000100
+Jan  1 00:00:46 m683A1E53C968 kern.warn kernel: [   52.903102]  ieee80211_ioctl_siwmode: imr.ifm_active=150995584, new mode=3, valid=1 
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.904493] wlan: [0: I:ANY] STOPPED EVENT for vap 24 (ffffffc076c25000)
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.904869] wlan: [0: I:ANY] wmi_vdev_down id: 24
+Jan  1 00:00:46 m683A1E53C968 kern.warn kernel: [   52.934666]  DEVICE IS DOWN ifname=apr1v7
+Jan  1 00:00:46 m683A1E53C968 kern.warn kernel: [   52.934699]  DEVICE IS DOWN ifname=apr1v7
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.962821] wlan: [4625: I:ANY] osif_vap_init: 8254: chan: 0xffffffc0761e1b00
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.962835] wlan: [4625: I:ANY] 
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.963212] wlan: [0: I:ANY] OL vap start id: 24 +
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.963245] wlan: [0: I:ANY] OL vap_start -
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.964183] wlan: [0: I:ANY] vht su bfee 0 vht mu bfee 0 vht su bfer 1 vht mu bfer 1 vht impl bf 0 vht sounding dim 7
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.982861] wlan: [4625: I:ANY] Mgmt Rate:12000(kbps) | Rate Code:0x10000002
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.982887] wlan: [4625: I:ANY] ol_ath_vap_set_param: Now supported BCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:46 m683A1E53C968 kern.err kernel: [   52.982919] wlan: [4625: I:ANY] ol_ath_vap_set_param: Now supported MCAST RATE is 12000(kbps) and rate code: 0x10000002
+Jan  1 00:00:47 m683A1E53C968 kern.warn brain:  boot time: 47.390 seconds, 4712 processes spawned
+Jan  1 00:01:04 m683A1E53C968 kern.notice config_updater: +OPENSSL_CONF=/etc/ssl/tamengine.cnf /usr/bin/runmax 90 /usr/bin/curl --compressed -L -sS --dump-header "/tmp/3097.curl_headers" --cacert "/etc/ssl/meraki-ca.crt" -o "/tmp/config.new" --engine ctamc --cert-type 
+Jan  1 00:01:04 m683A1E53C968 kern.notice config_updater:  ENG --cert RSA_SUDICRT --key-type ENG --key RSA_SUDIKEY  "https://cs210-2037.meraki.com:7734/config/node?cfg_ver=9&mac=68%3A3a%3A1e%3A53%3Ac9%3A68&build=26-axe-202001160318-G06a4d82b-rel-pioneer&arch=arm64&boar
+Jan  1 00:01:04 m683A1E53C968 kern.notice config_updater:  d=axe&use_ssl_auth=1&reason=FW_FETCH_RETRY"
+Jan  1 00:01:06 m683A1E53C968 kern.warn connection_monitor: try_mtun: 1 reason: mtun_con1=1 mtun_con2=1 mtun_con3=1
+Jan  1 00:01:11 m683A1E53C968 daemon.info hostapd: apr1v1: STA 34:12:f9:f8:19:ea IEEE 802.11: associated
+Jan  1 00:01:11 m683A1E53C968 kern.err kernel: [   77.519746] chatter: from_cli_isolation/upl_filter :: UplinkMACFilter: cli 34:12:F9:F8:19:EA no gw found for vlan 203. sending dhcp probe
+Jan  1 00:01:11 m683A1E53C968 daemon.info hostapd: apr1v1: STA 34:12:f9:f8:19:ea WPA: pairwise key handshake completed (RSN)
+Jan  1 00:01:11 m683A1E53C968 daemon.info hostapd: apr1v1: STA 34:12:f9:f8:19:ea RADIUS: starting accounting session A6366C03DCC90BEE
+Jan  1 00:01:11 m683A1E53C968 daemon.info hostapd: apr1v1: STA 34:12:f9:f8:19:ea IEEE 802.1X: authenticated - EAP type: 25 (unknown)
+Jan  1 00:01:11 m683A1E53C968 kern.err kernel: [   78.045257] chatter: from_cli_isolation/upl_filter :: UplinkMACFilter: cli 34:12:F9:F8:19:EA no gw found for vlan 203. sending dhcp probe
+Jan  1 00:01:11 m683A1E53C968 kern.err kernel: [   78.130905] chatter: from_cli_isolation/upl_filter :: UplinkMACFilter: cli 34:12:F9:F8:19:EA no gw found for vlan 203. sending dhcp probe
+Jan  1 00:01:12 m683A1E53C968 kern.err kernel: [   78.941319] chatter: from_cli_isolation/upl_filter :: UplinkMACFilter: cli 34:12:F9:F8:19:EA no gw found for vlan 203. sending dhcp probe
+Jan  1 00:01:22 m683A1E53C968 daemon.info hostapd: apr1v3: STA bc:09:63:1a:6d:d5 IEEE 802.11: associated
+Jan  1 00:01:22 m683A1E53C968 daemon.info hostapd: apr1v3: STA bc:09:63:1a:6d:d5 RADIUS: starting accounting session 55F2A2BAC79D478C
+Jan  1 00:01:22 m683A1E53C968 daemon.info hostapd: apr1v3: STA bc:09:63:1a:6d:d5 WPA: pairwise key handshake completed (RSN)
+Jan  1 00:01:22 m683A1E53C968 kern.notice brain: +/usr/bin/runmax 5 /usr/sbin/ntpd -d -s 2>&1
+Jun 19 07:12:39 m683A1E53C968 kern.notice brain: +/usr/sbin/ntpd -d -s >> /var/log/ntpd.log 2>&1 &
+Jun 19 07:12:39 m683A1E53C968 kern.warn brain: [ntpd] Started NTP daemon.
+Jun 19 07:12:46 m683A1E53C968 user.notice : +iwpriv mon0 get_monrxfilter | cut -d':' -f2
+Jun 19 07:12:46 m683A1E53C968 user.notice : +iwpriv mon1 get_monrxfilter | cut -d':' -f2
+Jun 19 07:12:46 m683A1E53C968 user.notice : +iwpriv mon2 get_monrxfilter | cut -d':' -f2
+Jun 19 07:12:46 m683A1E53C968 user.notice : +iwpriv mon0 set_monrxfilter 0; iwpriv mon1 set_monrxfilter 0; iwpriv mon2 set_monrxfilter 0; 
+Jun 19 07:12:46 m683A1E53C968 user.notice : +runmax 316 pcap_dump -y 1 -i "wired_log" -f "002800000000000c0015340000008100002800000000000c00150012000086dd00300000000000140015000400000084002800000000003600152e0000001cb7002800000000003800152c0000001cb7003000000000001400150004000
+Jun 19 07:12:46 m683A1E53C968 kern.info kernel: [  100.842835] device wired_log entered promiscuous mode
+Jun 19 07:13:04 m683A1E53C968 daemon.crit set_boot_time: booted at Fri Jun 19 07:11:05 2020
+Jun 19 07:13:35 m683A1E53C968 kern.info kernel: [  149.342820] device wired_log left promiscuous mode
+Jun 19 07:13:35 m683A1E53C968 user.notice : +iwpriv mon0 set_monrxfilter 164; iwpriv mon1 set_monrxfilter 164; iwpriv mon2 set_monrxfilter 224; 
+Jun 19 07:13:35 m683A1E53C968 user.notice : +iwpriv mon0 get_monrxfilter | cut -d':' -f2
+Jun 19 07:13:35 m683A1E53C968 user.notice : +iwpriv mon1 get_monrxfilter | cut -d':' -f2
+Jun 19 07:13:35 m683A1E53C968 user.notice : +iwpriv mon2 get_monrxfilter | cut -d':' -f2
+Jun 19 07:13:35 m683A1E53C968 user.notice : +iwpriv mon0 set_monrxfilter 0; iwpriv mon1 set_monrxfilter 0; iwpriv mon2 set_monrxfilter 0; 
+Jun 19 07:13:35 m683A1E53C968 user.notice : +runmax 316 pcap_dump -y 1 -i "wired_log" -f "002800000000000c0015340000008100002800000000000c00150012000086dd00300000000000140015000400000084002800000000003600152e0000001cb7002800000000003800152c0000001cb7003000000000001400150004000
+Jun 19 07:13:35 m683A1E53C968 user.notice : +iwpriv mon0 set_monrxfilter 164; iwpriv mon1 set_monrxfilter 164; iwpriv mon2 set_monrxfilter 224; 
+Jun 19 07:13:35 m683A1E53C968 kern.info kernel: [  149.493113] device wired_log entered promiscuous mode
+Jun 19 07:13:35 m683A1E53C968 kern.info kernel: [  149.497419] device wired_log left promiscuous mode
+Jun 19 07:13:59 m683A1E53C968 kern.warn kernel: [  173.948899] [soc1] FWLOG: [174689] WAL_DBGID_RX_LOCAL_DROP_LARGE_MGMT ( 0x9ab )
+Jun 19 07:13:59 m683A1E53C968 kern.warn kernel: [  173.948915] [soc1] FWLOG: [174693] WAL_DBGID_RX_LOCAL_DROP_LARGE_MGMT ( 0x9ab )
+Jun 19 07:14:00 m683A1E53C968 daemon.info hostapd: apr1v0: STA 48:5f:99:02:74:f5 IEEE 802.11: associated
+Jun 19 07:14:00 m683A1E53C968 daemon.info hostapd: apr1v0: STA 48:5f:99:02:74:f5 WPA: pairwise key handshake completed (RSN)
+Jun 19 07:14:00 m683A1E53C968 daemon.info hostapd: apr1v0: STA 48:5f:99:02:74:f5 RADIUS: starting accounting session 60666A1141CAE6BC
+Jun 19 07:14:00 m683A1E53C968 daemon.info hostapd: apr1v0: STA 48:5f:99:02:74:f5 IEEE 802.1X: authenticated - EAP type: 13 (unknown)
+Jun 19 07:14:01 m683A1E53C968 daemon.info hostapd: apr1v0: STA 48:5f:99:02:cd:1d IEEE 802.11: associated
+Jun 19 07:14:01 m683A1E53C968 daemon.info hostapd: apr1v0: STA 48:5f:99:02:cd:1d WPA: pairwise key handshake completed (RSN)
+Jun 19 07:14:01 m683A1E53C968 daemon.info hostapd: apr1v0: STA 48:5f:99:02:cd:1d RADIUS: starting accounting session 8D37B16264F4FE1C
+Jun 19 07:14:01 m683A1E53C968 daemon.info hostapd: apr1v0: STA 48:5f:99:02:cd:1d IEEE 802.1X: authenticated - EAP type: 13 (unknown)
+Jun 19 07:14:17 m683A1E53C968 kern.warn kernel: [  191.950565] [soc1] FWLOG: [192921] WAL_DBGID_RX_LOCAL_DROP_LARGE_MGMT ( 0x9ab )
+Jun 19 07:14:32 m683A1E53C968 kern.warn kernel: [  206.951803] [soc1] FWLOG: [207824] WAL_DBGID_RX_LOCAL_DROP_LARGE_MGMT ( 0x9ab )
+Jun 19 07:14:32 m683A1E53C968 kern.warn kernel: [  206.951818] [soc1] FWLOG: [207828] WAL_DBGID_RX_LOCAL_DROP_LARGE_MGMT ( 0x9ab )
+Jun 19 07:14:39 m683A1E53C968 kern.warn kernel: [  213.952384] [soc1] FWLOG: [215373] WAL_DBGID_RX_LOCAL_DROP_LARGE_MGMT ( 0x9ab )
+Jun 19 07:14:39 m683A1E53C968 kern.warn kernel: [  213.952403] [soc1] FWLOG: [215377] WAL_DBGID_RX_LOCAL_DROP_LARGE_MGMT ( 0x9ab )
