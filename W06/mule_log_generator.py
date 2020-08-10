@@ -1,5 +1,5 @@
 # This script searches for a match in the log file and creates another file only with line that have a match.
-
+#Git Test
 # Application input
 search_object = "dhcp"
 log_file = "event_messages.txt"
